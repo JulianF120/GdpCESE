@@ -26,7 +26,7 @@
 
 % Nombre del cliente, quien va a aprobar los resultados del proyecto, se puede usar con el comando \clientename y \empclientename
 \cliente{Nombre del cliente}
-\empresaCliente{Laboratorio de Sistemas Embebidos (LSE), Facultad de Ingeniería, Universidad de Buenos Aires (FIUBA)}
+\empresaCliente{LSE - FIUBA}
  
 \fechaINICIO{20 de octubre de 2026}		%Fecha de inicio de la cursada de GdP \fechaInicioName
 \fechaFINALPlan{8 de diciembre de 2026} 	%Fecha de final de cursada de GdP
@@ -205,14 +205,14 @@ En esta sección se describen los distintos requerimientos establecidos para el 
 	\item Requerimientos funcionales:
 		\begin{enumerate}
 			\item Funcionar durante 8 horas continuas con público y sin intervención.
-			\item Detectar a un visistante y orientar la cambeza hacia él en menos de 1 segundo. 
-			\item Alimentarse medainte la red de 220 V con una fuente certificada.
+			\item Detectar a un visitante y orientar la cabeza hacia él en menos de 1 segundo.
+			\item Alimentarse mediante la red de 220 V con una fuente certificada.
 			\item El robot debe ser capaz de girar su cabeza 180° en torno al eje vertical y 90° en torno al eje horizontal.
 			\item Reconocer comandos por voz y tener la capacidad de responder.
 		\end{enumerate}
 	\item Requerimientos no funcionales:
 		\begin{enumerate}
-			\item Garantizar la seguridad física evitando partes móviles expuestar que puedan atrapar dedos.
+			\item Garantizar la seguridad física evitando partes móviles expuestas que puedan atrapar dedos.
 			\item  Permitir el armado y la puesta en marcha en menos de 15 minutos. 
 		\end{enumerate}	
 	\item Requerimientos de interacción y reconocimiento:
@@ -224,9 +224,9 @@ En esta sección se describen los distintos requerimientos establecidos para el 
 	\item Requerimientos de subsistemas y hardware:
 		\begin{enumerate}
 			\item El controlador principal debe contar con un controlador LCD implementado en una placa de circuito impreso propia.
-			\item El sistema debe operar mediante una maquina de estados para gestionar las expresiones (reposo, saludo, sorpresa, dormido).
-			\item Contar con una pantalla de 4 a 5 pulgadas para la animacion de ojos y expresiones.
-			\item Contar con un cuello de dos ejes con servos con realimentacion
+			\item El sistema debe operar mediante una máquina de estados para gestionar las expresiones (reposo, saludo, sorpresa, dormido).
+			\item Contar con una pantalla de 4 a 5 pulgadas para la animación de ojos y expresiones.
+			\item Contar con un cuello de dos ejes con servos con realimentación.
 			\item Conectar el sensor de presencia y los subsistemas mediante protocolos como I2C o UART.
 			\item Enviar telemetría hacia una PC o placa Linux para visualizar en un monitor lateral las tareas, el estado, el tráfico de los buses y las detecciones de IA en vivo.
 		\end{enumerate}
@@ -236,11 +236,11 @@ En esta sección se describen los distintos requerimientos establecidos para el 
 			\item Definir un protocolo de mensajes documentado para el intercambio de comandos y eventos.
 			\item Implementar una arquitectura en capas que aísle el hardware de la lógica de comportamiento, permitiendo incorporar futuros agregados de IoT sin alterar el firmware base.
 		\end{enumerate}
-	\item Requerimientos de calidad
+	\item Requerimientos de calidad:
 		\begin{enumerate}
 			\item Aplicar capas de abstracción, análisis estático y una batería de tests unitarios y de integración.
 		\end{enumerate}
-	\item Requerimeintos de entregables:
+	\item Requerimientos de entregables:
 		\begin{enumerate}
 			\item Firmware documentado y versionado.
 			\item Especificación técnica del conector y protocolo de expansión.
@@ -251,7 +251,7 @@ En esta sección se describen los distintos requerimientos establecidos para el 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-Las historias de usuario (HU) seran ponderadas utilizadnos \textit{Story Points}, asignadas segun el
+Las historias de usuario (HU) serán ponderadas utilizando \textit{Story Points}, asignados según el
 siguiente criterio:
 
 \begin{itemize}
@@ -261,14 +261,14 @@ siguiente criterio:
 			\item Nivel medio: 5
 			\item Nivel alto: 13
 		\end{itemize}
-	\item Complejidad: dificultad para ejecutar la tarea en un corto periodo de tiempo debido la
-complejidad y desaf´ıos que presenta.
+	\item Complejidad: dificultad para ejecutar la tarea en un corto período de tiempo debido a la
+complejidad y desafíos que presenta.
 		\begin{itemize}
 			\item Nivel bajo: 5
 			\item Nivel medio: 13
 			\item Nivel alto: 21
 		\end{itemize}
-	\item Incertidumbre: nivel de riesgo que involucra realizar la tarea seg´un el nivel de conocimiento
+	\item Incertidumbre: nivel de riesgo que involucra realizar la tarea según el nivel de conocimiento
 previo.
 		\begin{itemize}
 			\item Nivel bajo: 1
@@ -277,26 +277,34 @@ previo.
 		\end{itemize}
 \end{itemize}
 
-Sumando el nivel de dificultad, complejidad e incertidumbre, se busca el siguiente valor m´as
-cercano en la serie de Fibonacci y as´ı se obtiene el peso del Story Point.
+Sumando el nivel de dificultad, complejidad e incertidumbre, se busca el siguiente valor más
+cercano en la serie de Fibonacci y así se obtiene el peso del Story Point.
 
 \begin{itemize}
-	\item Como cliente quiero que el robot pueda detectar a un visitantie y oritnetar la cabeza hacia el en menos de un segundo para mostar que el sistema es dinamico y atractivo.
-	\textit{Story Points}: (dificultad: 5, complejidad: 13, incertidumbre: 1)
-	\item Como cliente quiero que el sistema pueda armarse y ponerse en amrcha en menos de 15 minutos para que su puesta en marcha en distitnas exibihciones sea sencilla. 
-	\textit{Story Points}: (dificultad: 13, complejidad: 21, incertidumbre: 5)
-	\item Como cleinte quiero que el sistema pueda dectar rostros de personas en timepo real para mostrar las ese;azas que se inpoarteb ek ka carrera de CEIA. 
-	\textit{Story Points}: (dificultad: 5, complejidad: 5, incertidumbre: 1)
-	\item Como cliente quiero que el sistema cuenta con una placa de extencion para poder agregar facilemtena futuro funcionalidades relacionadas a otras carreras del LSE.
-	\textit{Story Points}: (dificultad: 13, complejidad: 21, incertidumbre: 13)
-	\item Como cliente quiero que el sistema reconozca comando de voz de visitantes para poder recordar el nombre de la persona y poder mostrar su rostro con su nombre en caso de que pase nuevamtne por stand
-	\textit{Story Points}: (dificultad: 13, complejidad: 13, incertidumbre: 13)
-	\item Como cliente quiero que el sitema cuente con una pantalla oara mostrar el estado interno del sistema para poder demotrar como se estra comportanto intermanemte el robto en cada una de sus acciones. 
-	\textit{Story Points}: (dificultad: 2, complejidad: 5, incertidumbre: 1)
-	\item Como cliente quiero que el robot sea capaz de funcionar 8 horas continuas sin itervencion, para poder exponer durante una jornada completa el mismo. 
-	\textit{Story Points}: (dificultad: 2, complejidad: 5, incertidumbre: 1)
-	\item Como cliente quiero contar con una documentacion completa del firmware y protocooles de comuniacion para ayudar a realizar expaciones futuras
-	\textit{Story Points}: (dificultad: 13, complejidad: 13, incertidumbre: 1)
+	\item Como cliente quiero que el robot pueda detectar a un visitante y orientar la cabeza hacia él en menos de un segundo para mostrar que el sistema es dinámico y atractivo.
+
+	\textit{Story Points}: 21 (dificultad: 5, complejidad: 13, incertidumbre: 1)
+	\item Como cliente quiero que el sistema pueda armarse y ponerse en marcha en menos de 15 minutos para que su puesta en marcha en distintas exhibiciones sea sencilla.
+
+	\textit{Story Points}: 55 (dificultad: 13, complejidad: 21, incertidumbre: 5)
+	\item Como cliente quiero que el sistema pueda detectar rostros de personas en tiempo real para mostrar las enseñanzas que se imparten en la CEIA.
+
+	\textit{Story Points}: 13 (dificultad: 5, complejidad: 5, incertidumbre: 1)
+	\item Como cliente quiero que el sistema cuente con una placa de extensión para poder agregar fácilmente a futuro funcionalidades relacionadas a otras carreras del LSE.
+
+	\textit{Story Points}: 55 (dificultad: 13, complejidad: 21, incertidumbre: 13)
+	\item Como cliente quiero que el sistema reconozca comandos de voz de visitantes para poder recordar el nombre de la persona y poder mostrar su rostro con su nombre en caso de que pase nuevamente por el stand.
+
+	\textit{Story Points}: 55 (dificultad: 13, complejidad: 13, incertidumbre: 13)
+	\item Como cliente quiero que el sistema cuente con una pantalla para mostrar el estado interno del sistema para poder demostrar cómo se está comportando internamente el robot en cada una de sus acciones.
+
+	\textit{Story Points}: 8 (dificultad: 2, complejidad: 5, incertidumbre: 1)
+	\item Como cliente quiero que el robot sea capaz de funcionar 8 horas continuas sin intervención, para poder exponer durante una jornada completa el mismo.
+
+	\textit{Story Points}: 8 (dificultad: 2, complejidad: 5, incertidumbre: 1)
+	\item Como cliente quiero contar con una documentación completa del firmware y protocolos de comunicación para ayudar a realizar expansiones futuras.
+
+	\textit{Story Points}: 34 (dificultad: 13, complejidad: 13, incertidumbre: 1)
 \end{itemize}
 
 \section{8. Entregables principales del proyecto}
@@ -306,11 +314,10 @@ cercano en la serie de Fibonacci y as´ı se obtiene el peso del Story Point.
 	\item Memoria del trabajo final.
 	\item Robot funcional.
 	\item Firmware documentado y versionado, con su batería de tests.
-	\item Aplicación de "vista por dentro" para el monitor lateral, integrando la visualización de telemetría embebida y el visor de inteligencia artificial en tiempo real.
-	\item Especificación del conector y del protocolo de expansión, validado mediante la integración del módulo de reconocimiento facial e interacción (CEIA)..
+	\item Aplicación de ``vista por dentro'' para el monitor lateral, integrando la visualización de telemetría embebida y el visor de inteligencia artificial en tiempo real.
+	\item Especificación del conector y del protocolo de expansión, validado mediante la integración del módulo de reconocimiento facial e interacción (CEIA).
 	\item Manual de armado, uso y mantenimiento para el laboratorio.
 \end{itemize}
-\end{consigna}
 
 \section{9. Desglose del trabajo en tareas}
 \label{sec:wbs}
