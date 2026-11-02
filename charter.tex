@@ -86,7 +86,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un robot expresivo de exihibicion, que atraiga vistitantes en stands y muestre en vivo cómo funciona por dentro. El trabajo tendrá un presupuesto preliminar estimado de 500 y un costo estimado de {\$ 200}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un robot expresivo de exhibición, que atraiga visitantes en stands y muestre en vivo cómo funciona por dentro. El trabajo tendrá un presupuesto preliminar estimado de 500 horas y un costo estimado de {\$ 200}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -107,14 +107,13 @@ Se adjunta a esta acta la planificación inicial.
 \section{1. Descripción técnica-conceptual del proyecto a realizar}
 \label{sec:descripcion}
 
-El proyecto consiste en la implementacion de un robot expresivo de exhibicion, que atraiga visitantes en standos y muestre en vivo como funciona por dentro. Se realizara para 
-El Laboratorio de Sistemas Embebidos (LSE) de la Facultad de Inegineria de la Universidad de Buenos Aires (FIUBA) con el objetivo personal de presentarlo como trabajo final de carrera y logrrar la titulacion de la carrera Maestria en Inteligencia Artificial Embebida (MIAE) de la FIUBA.
+El proyecto consiste en la implementación de un robot expresivo de exhibición, que atraiga visitantes en stands y muestre en vivo cómo funciona por dentro. Se realizará para el Laboratorio de Sistemas Embebidos (LSE) de la Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA) con el objetivo personal de presentarlo como trabajo final de carrera y lograr la titulación de la carrera Maestría en Inteligencia Artificial Embebida (MIAE) de la FIUBA.
 
-El LSE participará en feriass y eventos para difundir sus posgrados, pero no cuenta con una demostracion propia. Los sistemas embebidos son dificiles de mostrar: su funcionamiento no se ve.
+El LSE participará en ferias y eventos para difundir sus posgrados, pero no cuenta con una demostración propia. Los sistemas embebidos son difíciles de mostrar: su funcionamiento no se ve.
 
-La propuesta es una masscota: un robot con una pantalla como cara, que detecta a los visitantes, los sigue con la mirada, cambia de expresion y es capaz de recordad sus nombres. A su lad, un monitor muestra en timepo real sus tareass, su estado, el trafico de sus buses u lña vista de la camara con las detecciones e identificaciones de inteligencia artificial. Así el robot atra al público y el monitor muestra lo que aprende en la CESE y en la CEIA. 
+La propuesta es una mascota: un robot con una pantalla como cara, que detecta a los visitantes, los sigue con la mirada, cambia de expresión y es capaz de recordar sus nombres. A su lado, un monitor muestra en tiempo real sus tareas, su estado, el tráfico de sus buses y la vista de la cámara con las detecciones e identificaciones de inteligencia artificial. Así el robot atrae al público y el monitor muestra lo que se aprende en la CESE y en la CEIA.
 
-En la figura \ref{fig:diagBloques} se muestra el diagrama de bloques del sisteam. Se observa que le controlador priuncipal recibe la informacion del sensor de presencia y comanda la pantalla, el cuello, el parlate y los LEDs. Ademas envia telemtria al monitor de la vista por dentro. A traves del concetor de expasion se vincula con el modulo de inteligecia artificual (CEIA), procesado en el ordenarod/placa Linuz, y se permite sumar a futuro agregados de IoT sin modificar el diseño base. 
+En la figura \ref{fig:diagBloques} se muestra el diagrama de bloques del sistema. Se observa que el controlador principal recibe la información del sensor de presencia y comanda la pantalla, el cuello, el parlante y los LEDs. Además envía telemetría al monitor de la vista por dentro. A través del conector de expansión se vincula con el módulo de inteligencia artificial (CEIA), procesado en el ordenador/placa Linux, y se permite sumar a futuro agregados de IoT sin modificar el diseño base. 
 
 \begin{figure}[htpb]
 \centering 
@@ -123,12 +122,12 @@ En la figura \ref{fig:diagBloques} se muestra el diagrama de bloques del sisteam
 \label{fig:diagBloques}
 \end{figure}
 
-La figura \ref{fig:ImplementacionFinal} muestra una version de lo esperado.
+La figura \ref{fig:ImplementacionFinal} muestra una versión de lo esperado.
 
 \begin{figure}[htpb]
 \centering 
 \includegraphics[width=.65\textwidth]{./Figuras/ImplementacionFinal.png}
-\caption{Vista de implementacion final.}
+\caption{Vista de implementación final.}
 \label{fig:ImplementacionFinal}
 \end{figure}
 
@@ -140,11 +139,11 @@ La figura \ref{fig:ImplementacionFinal} muestra una version de lo esperado.
 \begin{table}[ht]
 \caption{Identificación de los interesados}
 \label{tab:interesados}
-\begin{tabularx}{\linewidth}{|l|X|X|l|}
+\begin{tabularx}{\linewidth}{|l|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|}
 \hline
 \rowcolor[HTML]{C0C0C0} 
-Rol           & Nombre y Apellido & Organización    & Puesto                    \\ \hline
-Cliente       & \codirector       & \empclientename & Coordinadora Académica CEIoT, LSE-FIUBA \\ \hline
+Rol           & Nombre y Apellido & Organización    &	Puesto                    \\ \hline
+Cliente       & \cosupname        & \empclientename & Coordinadora Académica CEIoT, LSE-FIUBA \\ \hline
 Responsable   & \authorname       & FIUBA           & Alumno                    \\ \hline
 Orientador    & \supname          & \pertesupname   & Director del Trabajo Final \\ \hline
 Usuario final & -                 & \empclientename & Expositores en stands del LSE \\ \hline
@@ -153,33 +152,33 @@ Usuario final & -                 & \empclientename & Expositores en stands del 
 
 \begin{itemize}
 	\item Cliente: LSE, es el que va a aprobar los resultados del proyecto.
-	\item Orientador: coordinador academico del CESE. Guia referente a la tematica de sistemas embebidos del proyecto.
-	\item Usuario final: Expositores en stands durante distntias ferias de de posgrados.
+	\item Orientador: coordinador académico del CESE. Guía referente a la temática de sistemas embebidos del proyecto.
+	\item Usuario final: expositores en stands durante distintas ferias de posgrados.
 \end{itemize}
 
 \section{3. Propósito del proyecto}
 \label{sec:proposito}
 
-El proposito del proyecto es desarrollar un robot expresivo de exibicio, destinado al Laboratorio de Sistemas Embebidos (LSE) de la Facultad de Inegineria de la Universidad de Buenos Aires (FIUBA), que atraiga visitantes en stands y muestre en vivo cómo funciona por dentro. El valor principal es difundir los posgrados en sistemas embebidos, demostrando de manera interactiva y atractiva lo que se aprende en la Carrera de Especializacion en Sistemas Embebidos (CESE) y la Carrera en Especializacion en Inteligencia Artificial (CEIA), sin depende de proyectos externos. 
+El propósito del proyecto es desarrollar un robot expresivo de exhibición, destinado al Laboratorio de Sistemas Embebidos (LSE) de la Facultad de Ingeniería de la Universidad de Buenos Aires (FIUBA), que atraiga visitantes en stands y muestre en vivo cómo funciona por dentro. El valor principal es difundir los posgrados en sistemas embebidos, demostrando de manera interactiva y atractiva lo que se aprende en la Carrera de Especialización en Sistemas Embebidos (CESE) y la Carrera de Especialización en Inteligencia Artificial (CEIA), sin depender de proyectos externos.
 
 \section{4. Alcance del proyecto}
 \label{sec:alcance}
 
-Se busca crear un robot expresivo de exibicion, que pueda: 
+Se busca crear un robot expresivo de exhibición, que pueda:
 
 \begin{itemize}
-	\item Mover el cuello como lo hace un humano, 180 en torno al eje vertical y 90 en torno al eje horizontal.
-	\item Detecaar precesncia de personas.
+	\item Mover el cuello como lo hace un humano, 180° en torno al eje vertical y 90° en torno al eje horizontal.
+	\item Detectar presencia de personas.
 	\item Detectar y reconocer rostros de personas.
 	\item Mostrar expresiones faciales en una pantalla, incluyendo ojos y boca. 
 	\item Recordar nombres de personas y saludarlas por su nombre. 
 	\item Recibir comandos de voz y responder con voz sintetizada.
-	\item Mostrar en un monitor externo la telemetria del robot, incluyendo:
+	\item Mostrar en un monitor externo la telemetría del robot, incluyendo:
 		\begin{itemize}
 		\item Estado de los sensores.
-		\item Visualizacion de datos.
-		\item Estado de los buses de comunicacion.
-		\item Vista de la camara con las detecciones e identificaciones de inteligencia artificial.
+		\item Visualización de datos.
+		\item Estado de los buses de comunicación.
+		\item Vista de la cámara con las detecciones e identificaciones de inteligencia artificial.
 		\end{itemize}
 \end{itemize}
 
@@ -189,12 +188,12 @@ Se busca crear un robot expresivo de exibicion, que pueda:
 Para el desarrollo del presente proyecto se supone que: 
 
 \begin{itemize}
-	\item Se dispondra de al menos 12 horas semanales para realizar avances.
-	\item Se contara con $USD 200$ para la compra de materiales y componentes, provisto por el LSE.
-	\item No supondra un problema la identificacion y registro del personal que participe en las ferias y eventos, para que el robot pueda reconocerlos y saludarlos por su nombre.
-	\item Se cuenta con los materiales necesarios para la cosntruccion de la carcasa del robot, incluyendo impresora 3D y filamento.
-	\item Se contara con el apoyo del LSE para la resolucion de problemas de hardware y software que puedan surgir durante el desarrollo del proyecto.
-	\item Los componentes y materiales necesarios para el desarrollo del proyecto estaran disponibles en el mercado.
+	\item Se dispondrá de al menos 12 horas semanales para realizar avances.
+	\item Se contará con USD 200 para la compra de materiales y componentes, provistos por el LSE.
+	\item No supondrá un problema la identificación y registro del personal que participe en las ferias y eventos, para que el robot pueda reconocerlos y saludarlos por su nombre.
+	\item Se cuenta con los materiales necesarios para la construcción de la carcasa del robot, incluyendo impresora 3D y filamento.
+	\item Se contará con el apoyo del LSE para la resolución de problemas de hardware y software que puedan surgir durante el desarrollo del proyecto.
+	\item Los componentes y materiales necesarios para el desarrollo del proyecto estarán disponibles en el mercado.
 \end{itemize}
 
 \section{6. Requerimientos}
