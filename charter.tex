@@ -199,71 +199,116 @@ Para el desarrollo del presente proyecto se supone que:
 \section{6. Requerimientos}
 \label{sec:requerimientos}
 
-\begin{consigna}{red} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
-Los requerimientos deben enumerarse y de ser posible estar agrupados por afinidad, por ejemplo:
+En esta sección se describen los distintos requerimientos establecidos para el proyecto propuesto:
 
 \begin{enumerate}
 	\item Requerimientos funcionales:
 		\begin{enumerate}
-			\item El sistema debe...
-			\item Tal componente debe...
-			\item El usuario debe poder...
+			\item Funcionar durante 8 horas continuas con público y sin intervención.
+			\item Detectar a un visistante y orientar la cambeza hacia él en menos de 1 segundo. 
+			\item Alimentarse medainte la red de 220 V con una fuente certificada.
+			\item El robot debe ser capaz de girar su cabeza 180° en torno al eje vertical y 90° en torno al eje horizontal.
+			\item Reconocer comandos por voz y tener la capacidad de responder.
 		\end{enumerate}
-	\item Requerimientos de documentación:
+	\item Requerimientos no funcionales:
 		\begin{enumerate}
-			\item Requerimiento 1.
-			\item Requerimiento 2 (prioridad menor)
+			\item Garantizar la seguridad física evitando partes móviles expuestar que puedan atrapar dedos.
+			\item  Permitir el armado y la puesta en marcha en menos de 15 minutos. 
+		\end{enumerate}	
+	\item Requerimientos de interacción y reconocimiento:
+		\begin{enumerate}
+			\item Identificar a los visitantes previamente registrados durante la jornada y mostrar sus nombres en el monitor lateral en tiempo real.
+			\item Contabilizar la cantidad de personas detectadas frente al stand durante la exhibición.
+			\item Ejecutar detección y seguimiento de rostros, registro interactivo por voz/nombre y reconocimiento facial en tiempo real a través del módulo de IA.
 		\end{enumerate}
-	\item Requerimiento de testing...
-	\item Requerimientos de la interfaz...
-	\item Requerimientos interoperabilidad...
-	\item etc...
+	\item Requerimientos de subsistemas y hardware:
+		\begin{enumerate}
+			\item El controlador principal debe contar con un controlador LCD implementado en una placa de circuito impreso propia.
+			\item El sistema debe operar mediante una maquina de estados para gestionar las expresiones (reposo, saludo, sorpresa, dormido).
+			\item Contar con una pantalla de 4 a 5 pulgadas para la animacion de ojos y expresiones.
+			\item Contar con un cuello de dos ejes con servos con realimentacion
+			\item Conectar el sensor de presencia y los subsistemas mediante protocolos como I2C o UART.
+			\item Enviar telemetría hacia una PC o placa Linux para visualizar en un monitor lateral las tareas, el estado, el tráfico de los buses y las detecciones de IA en vivo.
+		\end{enumerate}
+	\item Requerimientos de extensibilidad y arquitectura:
+		\begin{enumerate}
+			\item Incluir un conector de expansión físico que proporcione alimentación, I2C, UART y USB.
+			\item Definir un protocolo de mensajes documentado para el intercambio de comandos y eventos.
+			\item Implementar una arquitectura en capas que aísle el hardware de la lógica de comportamiento, permitiendo incorporar futuros agregados de IoT sin alterar el firmware base.
+		\end{enumerate}
+	\item Requerimientos de calidad
+		\begin{enumerate}
+			\item Aplicar capas de abstracción, análisis estático y una batería de tests unitarios y de integración.
+		\end{enumerate}
+	\item Requerimeintos de entregables:
+		\begin{enumerate}
+			\item Firmware documentado y versionado.
+			\item Especificación técnica del conector y protocolo de expansión.
+			\item Manual completo de armado, uso y mantenimiento.
+		\end{enumerate}
 \end{enumerate}
-
-Leyendo los requerimientos se debe poder interpretar cómo será el proyecto y su funcionalidad.
-
-Indicar claramente cuál es la prioridad entre los distintos requerimientos y si hay requerimientos opcionales. 
-
-\textbf{¡¡¡No olvidarse de que los requerimientos incluyen a las regulaciones y normas vigentes!!!}
-
-Y al escribirlos seguir las siguientes reglas:
-\begin{itemize}
-	\item Ser breve y conciso (nadie lee cosas largas). 
-	\item Ser específico: no dejar lugar a confusiones.
-	\item Expresar los requerimientos en términos que sean cuantificables y medibles.
-\end{itemize}
-
-\end{consigna} % ELIMINAR \begin{consigna}{red} y \end{consigna}{red} en las secciones que vayan completando para cada entrega parcial.
 
 \section{7. Historias de usuarios (\textit{Product backlog})}
 \label{sec:backlog}
 
-\begin{consigna}{red}
-Descripción: en esta sección se deben incluir las historias de usuarios y su ponderación (\textit{history points}). Recordar que las historias de usuarios son descripciones cortas y simples de una característica contada desde la perspectiva de la persona que desea la nueva capacidad, generalmente un usuario o cliente del sistema. La ponderación es un número entero que representa el tamaño de la historia comparada con otras historias de similar tipo.
+Las historias de usuario (HU) seran ponderadas utilizadnos \textit{Story Points}, asignadas segun el
+siguiente criterio:
 
-Se debe indicar explícitamente el criterio para calcular los \textit{story points} de cada historia.
+\begin{itemize}
+	\item Dificultad: cantidad de tiempo que lleva la tarea.
+		\begin{itemize}
+			\item Nivel bajo: 2
+			\item Nivel medio: 5
+			\item Nivel alto: 13
+		\end{itemize}
+	\item Complejidad: dificultad para ejecutar la tarea en un corto periodo de tiempo debido la
+complejidad y desaf´ıos que presenta.
+		\begin{itemize}
+			\item Nivel bajo: 5
+			\item Nivel medio: 13
+			\item Nivel alto: 21
+		\end{itemize}
+	\item Incertidumbre: nivel de riesgo que involucra realizar la tarea seg´un el nivel de conocimiento
+previo.
+		\begin{itemize}
+			\item Nivel bajo: 1
+			\item Nivel medio: 5
+			\item Nivel alto: 13
+		\end{itemize}
+\end{itemize}
 
-El formato propuesto es: 
-\begin{enumerate}
-\item ``Como [rol] quiero [tal cosa] para [tal otra cosa]."
+Sumando el nivel de dificultad, complejidad e incertidumbre, se busca el siguiente valor m´as
+cercano en la serie de Fibonacci y as´ı se obtiene el peso del Story Point.
 
-\textit{Story points}: 8 (complejidad: 3, dificultad: 2, incertidumbre: 3)
-\end{enumerate}
-\end{consigna}
+\begin{itemize}
+	\item Como cliente quiero que el robot pueda detectar a un visitantie y oritnetar la cabeza hacia el en menos de un segundo para mostar que el sistema es dinamico y atractivo.
+	\textit{Story Points}: (dificultad: 5, complejidad: 13, incertidumbre: 1)
+	\item Como cliente quiero que el sistema pueda armarse y ponerse en amrcha en menos de 15 minutos para que su puesta en marcha en distitnas exibihciones sea sencilla. 
+	\textit{Story Points}: (dificultad: 13, complejidad: 21, incertidumbre: 5)
+	\item Como cleinte quiero que el sistema pueda dectar rostros de personas en timepo real para mostrar las ese;azas que se inpoarteb ek ka carrera de CEIA. 
+	\textit{Story Points}: (dificultad: 5, complejidad: 5, incertidumbre: 1)
+	\item Como cliente quiero que el sistema cuenta con una placa de extencion para poder agregar facilemtena futuro funcionalidades relacionadas a otras carreras del LSE.
+	\textit{Story Points}: (dificultad: 13, complejidad: 21, incertidumbre: 13)
+	\item Como cliente quiero que el sistema reconozca comando de voz de visitantes para poder recordar el nombre de la persona y poder mostrar su rostro con su nombre en caso de que pase nuevamtne por stand
+	\textit{Story Points}: (dificultad: 13, complejidad: 13, incertidumbre: 13)
+	\item Como cliente quiero que el sitema cuente con una pantalla oara mostrar el estado interno del sistema para poder demotrar como se estra comportanto intermanemte el robto en cada una de sus acciones. 
+	\textit{Story Points}: (dificultad: 2, complejidad: 5, incertidumbre: 1)
+	\item Como cliente quiero que el robot sea capaz de funcionar 8 horas continuas sin itervencion, para poder exponer durante una jornada completa el mismo. 
+	\textit{Story Points}: (dificultad: 2, complejidad: 5, incertidumbre: 1)
+	\item Como cliente quiero contar con una documentacion completa del firmware y protocooles de comuniacion para ayudar a realizar expaciones futuras
+	\textit{Story Points}: (dificultad: 13, complejidad: 13, incertidumbre: 1)
+\end{itemize}
 
 \section{8. Entregables principales del proyecto}
 \label{sec:entregables}
 
-\begin{consigna}{red}
-Los entregables del proyecto son (ejemplo):
-
 \begin{itemize}
-	\item Manual de usuario.
-	\item Diagrama de circuitos esquemáticos.
-	\item Código fuente del firmware.
-	\item Diagrama de instalación.
 	\item Memoria del trabajo final.
-	\item etc...
+	\item Robot funcional.
+	\item Firmware documentado y versionado, con su batería de tests.
+	\item Aplicación de "vista por dentro" para el monitor lateral, integrando la visualización de telemetría embebida y el visor de inteligencia artificial en tiempo real.
+	\item Especificación del conector y del protocolo de expansión, validado mediante la integración del módulo de reconocimiento facial e interacción (CEIA)..
+	\item Manual de armado, uso y mantenimiento para el laboratorio.
 \end{itemize}
 \end{consigna}
 
