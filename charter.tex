@@ -86,7 +86,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un robot expresivo de exhibición, que atraiga visitantes en stands y muestre en vivo cómo funciona por dentro. El trabajo tendrá un presupuesto preliminar estimado de 521 horas y un costo estimado de {\$ 200}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un robot expresivo de exhibición, que atraiga visitantes en stands y muestre en vivo cómo funciona por dentro. El trabajo tendrá un presupuesto preliminar estimado de 435 horas y un costo estimado de {\$ 200}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -337,7 +337,7 @@ cercano en la serie de Fibonacci y así se obtiene el peso del Story Point.
 	\item Definición de estética del robot (3 h)
 	\item Búsqueda y selección de un diseño mecánico de uso libre para el cuello y la carcasa (6 h)
 	\end{enumerate}
-\item Elección de hardware (40 h)
+\item Elección de hardware (38 h)
 	\begin{enumerate}
 	\item Investigación y selección de sensores de cercanía/detección (4 h)
 	\item Investigación y selección de módulos de entrada de audio (4 h)
@@ -345,7 +345,7 @@ cercano en la serie de Fibonacci y así se obtiene el peso del Story Point.
 	\item Investigación y selección de módulo del LCD seleccionado (4 h)
 	\item Investigación y selección de un módulo de comunicación conjunta de I2C, UART y USB (4 h)
 	\item Investigación y selección de módulo o cámara pequeña (4 h)
-	\item Investigación y selección de placa de desarrollo a utilizar (8 h)
+	\item Investigación y selección de placa de desarrollo a utilizar (6 h)
 	\item Definición de requisitos mínimos de computadora externa a utilizar (4 h)
 	\item Selección de la fuente de alimentación de 220 V certificada (4 h)
 	\end{enumerate}
@@ -356,22 +356,22 @@ cercano en la serie de Fibonacci y así se obtiene el peso del Story Point.
 	\item Montaje de servos y cuello (4 h)
 	\item Integración de la fuente de alimentación y cableado (4 h)
 	\end{enumerate}
-\item Desarrollo de firmware (113 h)
+\item Desarrollo de firmware (101 h)
 	\begin{enumerate}
 	\item Definir el diseño del firmware del sistema (3 h)
 	\item Configuración del entorno de desarrollo y del análisis estático (6 h)
 	\item Generación de protocolo de comunicación propio del robot (8 h)
-	\item Implementación de driver de pantalla LCD (10 h)
-	\item Implementación de driver de pruebas de pantalla LCD (10 h)
+	\item Implementación de driver de pantalla LCD (8 h)
+	\item Implementación de driver de pruebas de pantalla LCD (6 h)
 	\item Implementación de driver de movimiento de servos (4 h)
 	\item Implementación de driver de prueba de movimiento de servos (4 h)
 	\item Implementación de driver de sensores de cercanía/detección (6 h)
 	\item Implementación de driver de prueba de sensores de cercanía/detección (6 h)
 	\item Implementación de driver de entrada de audio (6 h)
 	\item Implementación de driver de salida de audio (6 h)
-	\item Implementación de la máquina de estados de expresiones (8 h)
-	\item Implementación de la animación de ojos y boca (8 h)
-	\item Control de servos con realimentación y seguimiento de la mirada (10 h)
+	\item Implementación de la máquina de estados de expresiones (6 h)
+	\item Implementación de la animación de ojos y boca (6 h)
+	\item Control de servos con realimentación y seguimiento de la mirada (8 h)
 	\item Lógica de detección de presencia, salida del visitante y mensaje de despedida (6 h)
 	\item Implementación de telemetría del firmware (6 h)
 	\item Tests unitarios de la lógica de comportamiento (6 h)
@@ -391,27 +391,27 @@ cercano en la serie de Fibonacci y así se obtiene el peso del Story Point.
 		\item Desarrollo de software de módulo IA externo del robot (2 h)
 		\item Desarrollo de tests de software de módulo IA externo del robot (6 h)
 	\end{enumerate}
-\item Aplicación ``vista por dentro'' (26 h)
+\item Aplicación ``vista por dentro'' (21 h)
 	\begin{enumerate}
-		\item Diseño de la aplicación y de la interfaz del monitor lateral (4 h)
-		\item Implementación de la visualización de telemetría y tráfico de buses (14 h)
+		\item Diseño de la aplicación y de la interfaz del monitor lateral (3 h)
+		\item Implementación de la visualización de telemetría y tráfico de buses (10 h)
 		\item Integración de la vista de cámara con las detecciones de IA (8 h)
 	\end{enumerate}
-\item Desarrollo integrado del sistema (106 h)
+\item Desarrollo integrado del sistema (75 h)
 	\begin{enumerate}
-		\item Unificación de drivers de pantalla, servos y sensores en sistema central (20 h)
-		\item Unificación de audio, protocolo y telemetría en sistema central (20 h)
-		\item Acabado estético del robot (10 h)
+		\item Unificación de drivers de pantalla, servos y sensores en sistema central (15 h)
+		\item Unificación de audio, protocolo y telemetría en sistema central (15 h)
+		\item Acabado estético del robot (5 h)
 		\item Integración de módulos de hardware con estética de robot y primer armado (5 h)
-		\item Búsqueda de optimización de armado (20 h)
+		\item Búsqueda de optimización de armado (10 h)
 		\item Prueba de encendido y prueba general de hardware (5 h)
 		\item Prueba de integración de hardware e IA (6 h)
-		\item Corrección de errores y funcionalidades faltantes (20 h)
+		\item Corrección de errores y funcionalidades faltantes (14 h)
 	\end{enumerate}
-\item Verificación y validación (17 h)
+\item Verificación y validación (14 h)
 	\begin{enumerate}
 		\item Prueba del juego de interacción con objetos (3 h)
-		\item Plan de pruebas de verificación de requerimientos (8 h)
+		\item Plan de pruebas de verificación de requerimientos (5 h)
 		\item Medición del tiempo de detección y giro de cabeza (3 h)
 		\item Verificación de seguridad física y del tiempo de armado (3 h)
 	\end{enumerate}
@@ -422,23 +422,20 @@ cercano en la serie de Fibonacci y así se obtiene el peso del Story Point.
 		\item Prueba de largo tiempo funcionando (12 h)
 		\item Prueba de demo de interacción (2 h)
 	\end{enumerate}
-\item Documentación de entregables (40 h)
+\item Documentación de entregables (20 h)
 	\begin{enumerate}
-		\item Documentación de firmware (10 h)
-		\item Manual de puesta en marcha (10 h)
-		\item Documentación de protocolos del robot (10 h)
-		\item Manual de integración de nuevos módulos (10 h)
+		\item Documentación de firmware, protocolo y conector de expansión (10 h)
+		\item Manual de armado, uso y mantenimiento (10 h)
 	\end{enumerate}
-\item Documentación del trabajo final (73 h)
+\item Documentación del trabajo final (60 h)
 	\begin{enumerate}
-		\item Redacción de taller de trabajo final A (30 h)
-		\item Redacción de taller de trabajo final B (30 h)
-		\item Preparación de la presentación final y ensayo de la defensa (10 h)
-		\item Video demostrativo del robot (3 h)
+		\item Redacción de taller de trabajo final A (27 h)
+		\item Redacción de taller de trabajo final B (27 h)
+		\item Preparación de la presentación final y ensayo de la defensa (6 h)
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: 521 h.
+Cantidad total de horas: 435 h.
 
 
 \section{10. Diagrama de Activity On Node}
@@ -460,10 +457,10 @@ Las dependencias consideradas son las siguientes:
 	\item La aplicación ``vista por dentro'' (G6) necesita la telemetría del firmware (G4) y las detecciones del módulo de IA (G5).
 	\item El desarrollo integrado (G7) requiere la mecánica y alimentación (G3) y la aplicación (G6), que a su vez incluye al firmware y a la IA.
 	\item La documentación de entregables (G10) comienza una vez integrado el sistema (G7), en paralelo con la verificación (G8) y la puesta en marcha (G9).
-	\item La documentación del trabajo final (G11) se redacta en paralelo con el desarrollo, a partir de la investigación inicial (G1). Las tareas de presentación final y video, que requieren el robot terminado, se realizan al cierre dentro de la holgura de este grupo.
+	\item La documentación del trabajo final (G11) se redacta en paralelo con el desarrollo, a partir de la investigación inicial (G1). Las tareas de presentación final, que requieren el robot terminado, se realizan al cierre dentro de la holgura de este grupo.
 \end{itemize}
 
-La duración total del proyecto según el camino crítico es de 346 h. En la tabla \ref{tab:caminos} se comparan los caminos del diagrama.
+La duración total del proyecto según el camino crítico es de 293 h. En la tabla \ref{tab:caminos} se comparan los caminos del diagrama.
 
 \begin{table}[ht]
 \centering
@@ -473,106 +470,103 @@ La duración total del proyecto según el camino crítico es de 346 h. En la tab
 \hline
 \rowcolor[HTML]{C0C0C0}
 Tipo & Grupos & Duración [h] & Holgura [h] \\ \hline
-Crítico & G1, G2, G4, G6, G7, G8, G9 & 346 & 0 \\ \hline
-Crítico & G1, G2, G4, G6, G7, G10 & 346 & 0 \\ \hline
-Semicrítico & G1, G2, G5, G6, G7, G8, G9 & 273 & 73 \\ \hline
-Semicrítico & G1, G2, G3, G7, G8, G9 & 229 & 117 \\ \hline
-No crítico & G1, G11 & 94 & 252 \\ \hline
+Crítico & G1, G2, G4, G6, G7, G8, G9 & 293 & 0 \\ \hline
+Semicrítico & G1, G2, G4, G6, G7, G10 & 276 & 17 \\ \hline
+Semicrítico & G1, G2, G5, G6, G7, G8, G9 & 232 & 61 \\ \hline
+Semicrítico & G1, G2, G3, G7, G8, G9 & 193 & 100 \\ \hline
+No crítico & G1, G11 & 81 & 212 \\ \hline
 \end{tabularx}
 \end{table}
 
-Se consideran caminos semicríticos aquellos cuya holgura es menor a la mitad de la duración del camino crítico (173 h). Hay dos caminos críticos que terminan con la misma duración: el de la verificación y la puesta en marcha (G8 y G9), y el de la documentación de entregables (G10). Un retraso en cualquiera de los grupos G1, G2, G4, G6 o G7 retrasa todo el proyecto. El firmware (G4) es el grupo más largo del camino crítico (113 h), por lo que es el que requiere más seguimiento. El módulo de IA (G5) tiene 73 h de holgura, pero un atraso mayor lo vuelve crítico.
+Se consideran caminos semicríticos aquellos cuya holgura es menor a la mitad de la duración del camino crítico (146 h). Hay un único camino crítico: cualquier retraso en los grupos G1, G2, G4, G6, G7, G8 o G9 retrasa todo el proyecto. El firmware (G4) es el grupo más largo de ese camino (101 h), por lo que es el que requiere más seguimiento. La documentación de entregables (G10) tiene solo 17 h de holgura y el módulo de IA (G5) tiene 61 h, por lo que un atraso en ellos puede volverlos críticos.
 
-La duración de 346 h supone que los grupos de distintos caminos se realizan en paralelo. Como el proyecto lo lleva adelante una sola persona, el esfuerzo total es de 521 h (suma de todos los grupos) y el diagrama se utiliza para definir el orden de ejecución y las prioridades, no la duración en calendario.
+La duración de 293 h supone que los grupos de distintos caminos se realizan en paralelo. Como el proyecto lo lleva adelante una sola persona, el esfuerzo total es de 435 h (suma de todos los grupos) y el diagrama se utiliza para definir el orden de ejecución y las prioridades. La duración en calendario, con un único recurso, se calcula en el diagrama de Gantt de la sección \ref{sec:gantt}.
 
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
 
-\begin{consigna}{red}
-Existen muchos programas y recursos \textit{online} para hacer diagramas de Gantt, entre los cuales destacamos:
+El diagrama de Gantt se elaboró con el paquete \textit{pgfgantt} a partir del WBS de la sección \ref{sec:wbs} y de las dependencias del diagrama de la sección \ref{sec:AoN}. Se utilizaron los siguientes supuestos de planificación:
 
 \begin{itemize}
-\item Planner
-\item GanttProject
-\item Trello + \textit{plugins}. En el siguiente link hay un tutorial oficial: \\ \url{https://blog.trello.com/es/diagrama-de-gantt-de-un-proyecto}
-\item Creately, herramienta online colaborativa. \\\url{https://creately.com/diagram/example/ieb3p3ml/LaTeX}
-\item Se puede hacer en latex con el paquete \textit{pgfgantt}\\ \url{http://ctan.dcc.uchile.cl/graphics/pgf/contrib/pgfgantt/pgfgantt.pdf}
+	\item El proyecto lo realiza una sola persona, por lo que los grupos de tareas se ejecutan en forma secuencial y no en paralelo.
+	\item La dedicación es de 12 h semanales, según lo indicado en los supuestos del proyecto.
+	\item El desarrollo comienza el 09/12/2026, una vez finalizada la cursada de Gestión de Proyectos (planificación entre el 20/10/2026 y el 08/12/2026).
+	\item No se trabaja entre el 24/12/2026 y el 04/01/2027.
+	\item La redacción de los talleres de trabajo final A y B se realiza al final del proyecto.
 \end{itemize}
 
-Pegar acá una captura de pantalla del diagrama de Gantt, cuidando que la letra sea suficientemente grande como para ser legible. 
-Si el diagrama queda demasiado ancho, se puede pegar primero la ``tabla'' del Gantt y luego pegar la parte del diagrama de barras del diagrama de Gantt.
+En la tabla \ref{tab:fechas} se indican las fechas de inicio y de fin de cada grupo de tareas. Con estas condiciones, las 435 h de trabajo se completan el 31/08/2027 y la defensa pública es el 31/08/2027, como se indica en el acta constitutiva.
 
-Configurar el software para que en la parte de la tabla muestre los códigos del EDT (WBS).\\
-Configurar el software para que al lado de cada barra muestre el nombre de cada tarea.\\
-Revisar que la fecha de finalización coincida con lo indicado en el Acta Constitutiva.
+\begin{table}[ht]
+\centering
+\caption{Fechas de inicio y fin de cada grupo de tareas}
+\label{tab:fechas}
+\begin{tabularx}{\linewidth}{|c|X|c|c|c|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+EDT & Grupo de tareas & Horas [h] & Inicio & Fin \\ \hline
+1 & Investigación y desglose macro de diseño & 21 & 09/12/2026 & 21/12/2026 \\ \hline
+2 & Elección de hardware & 38 & 22/12/2026 & 24/01/2027 \\ \hline
+3 & Mecánica y alimentación & 22 & 25/01/2027 & 06/02/2027 \\ \hline
+4 & Desarrollo de firmware & 101 & 07/02/2027 & 06/04/2027 \\ \hline
+5 & Desarrollo de módulo de IA & 40 & 07/04/2027 & 29/04/2027 \\ \hline
+6 & Aplicación ``vista por dentro'' & 21 & 30/04/2027 & 11/05/2027 \\ \hline
+7 & Desarrollo integrado del sistema & 75 & 12/05/2027 & 24/06/2027 \\ \hline
+8 & Verificación y validación & 14 & 25/06/2027 & 02/07/2027 \\ \hline
+9 & Puesta en marcha & 23 & 03/07/2027 & 16/07/2027 \\ \hline
+10 & Documentación de entregables & 20 & 17/07/2027 & 27/07/2027 \\ \hline
+11 & Documentación del trabajo final & 60 & 28/07/2027 & 31/08/2027 \\ \hline
+\end{tabularx}
+\end{table}
 
-En la figura \ref{fig:gantt}, se muestra un ejemplo de diagrama de gantt realizado con el paquete de \textit{pgfgantt}. 
-En la plantilla pueden ver el código que lo genera y usarlo de base para construir el propio.
+En la figura \ref{fig:gantt} se muestra el diagrama de Gantt. A la izquierda de cada barra se indica el código del EDT y el nombre del grupo de tareas.
 
-Las fechas pueden ser calculadas utilizando alguna de las herramientas antes citadas. Sin embargo, el siguiente ejemplo
-fue elaborado utilizando 
-\href{https://docs.google.com/spreadsheets/d/1fBz8NhSpc4tkkhz3KjJCbh1nR_ltDkfEcZi4tZXduqs}{esta hoja de cálculo}.
-
-Es importante destacar que el ancho del diagrama estará dado por la longitud del texto utilizado para las tareas 
-(Ejemplo: tarea 1, tarea 2, etcétera) y el valor \textit{x unit}. Para mejorar la apariencia del diagrama, es necesario
-ajustar este valor y, quizás, acortar los nombres de las tareas.
-
+\begin{landscape}
 \begin{figure}[htpb]
   \begin{center}
     \begin{ganttchart}[
       time slot unit=day,
       time slot format=isodate,
-      x unit=0.038cm,
-      y unit title=0.7cm,
-      y unit chart=0.6cm,
-      milestone/.append style={xscale=4}
-      ]{2021-03-05}{2021-12-16}
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{year} \\
-      \gantttitlecalendar*{2021-03-05}{2021-12-16}{month} \\
-      \ganttgroup{Duración Total}{2021-03-05}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%Organización
-      \ganttgroup{Organización}{2021-03-05}{2021-04-16} \\
-      \ganttbar{Planificación del proyecto}{2021-03-05}{2021-04-15} \\
-      %%%%%%%%%%%%%%%%%Ejecución
-      \ganttgroup{Ejecución}{2021-04-16}{2021-10-21} \\
-      \ganttbar{Tarea 1}{2021-04-16}{2021-04-29} \\
-      \ganttbar{Tarea 2}{2021-04-30}{2021-05-13} \\
-      \ganttbar{Tarea 3}{2021-05-14}{2021-05-27} \\
-      \ganttbar{Tarea 4}{2021-05-28}{2021-07-12} \\
-      \ganttbar{Tarea 5}{2021-07-13}{2021-08-09} \\
-      \ganttbar{Tarea 6}{2021-08-10}{2021-09-23} \\
-      \ganttbar{Tarea 7}{2021-09-24}{2021-09-30} \\
-      \ganttbar{Tarea 8}{2021-10-01}{2021-10-14} \\
-      \ganttbar{Tarea 9}{2021-10-15}{2021-10-21} \\
-      % %%%%%%%%%%%%%%%%%Finalización
-      \ganttgroup{Finalización}{2021-10-22}{2021-12-16} \\
-      \ganttbar{Memoria v1}{2021-10-22}{2021-11-04} \\
-      \ganttbar{Memoria v2}{2021-11-05}{2021-11-18} \\
-      \ganttbar{Memoria final}{2021-11-19}{2021-12-02} \\
-      % La fecha del siguiente milestone es la fecha en que terminamos la memoria
-      \ganttmilestone{Enviar memoria al director}{2021-12-02} \\
-      \ganttbar{Elaborar la presentación}{2021-12-03}{2021-12-16} \\
-      \ganttmilestone{Ensayo de la presentación}{2021-12-16} \\
-      %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+      x unit=0.053cm,
+      y unit title=0.6cm,
+      y unit chart=0.62cm,
+      title label font=\footnotesize,
+      bar label font=\footnotesize,
+      group label font=\footnotesize\bfseries,
+      milestone label font=\footnotesize,
+      milestone/.append style={xscale=3}
+      ]{2026-10-20}{2027-08-31}
+      \gantttitlecalendar*{2026-10-20}{2027-08-31}{year} \\
+      \gantttitlecalendar*{2026-10-20}{2027-08-31}{month} \\
+      \ganttgroup{Duración total}{2026-10-20}{2027-08-31} \\
+      \ganttbar{Planificación del proyecto (GdP)}{2026-10-20}{2026-12-08} \\
+      \ganttmilestone{Entrega del plan de proyecto}{2026-12-08} \\
+      \ganttgroup{Diseño y selección}{2026-12-09}{2027-01-24} \\
+      \ganttbar{1. Investigación y desglose macro de diseño (21 h)}{2026-12-09}{2026-12-21} \\
+      \ganttbar{2. Elección de hardware (38 h)}{2026-12-22}{2027-01-24} \\
+      \ganttmilestone{Hardware definido}{2027-01-24} \\
+      \ganttgroup{Desarrollo}{2027-01-25}{2027-06-24} \\
+      \ganttbar{3. Mecánica y alimentación (22 h)}{2027-01-25}{2027-02-06} \\
+      \ganttbar{4. Desarrollo de firmware (101 h)}{2027-02-07}{2027-04-06} \\
+      \ganttbar{5. Desarrollo de módulo de IA (40 h)}{2027-04-07}{2027-04-29} \\
+      \ganttbar{6. Aplicación ``vista por dentro'' (21 h)}{2027-04-30}{2027-05-11} \\
+      \ganttbar{7. Desarrollo integrado del sistema (75 h)}{2027-05-12}{2027-06-24} \\
+      \ganttmilestone{Sistema integrado}{2027-06-24} \\
+      \ganttgroup{Verificación y puesta en marcha}{2027-06-25}{2027-07-16} \\
+      \ganttbar{8. Verificación y validación (14 h)}{2027-06-25}{2027-07-02} \\
+      \ganttbar{9. Puesta en marcha (23 h)}{2027-07-03}{2027-07-16} \\
+      \ganttmilestone{Robot funcionando}{2027-07-16} \\
+      \ganttgroup{Cierre}{2027-07-17}{2027-08-31} \\
+      \ganttbar{10. Documentación de entregables (20 h)}{2027-07-17}{2027-07-27} \\
+      \ganttbar{11. Documentación del trabajo final (60 h)}{2027-07-28}{2027-08-31} \\
+      \ganttmilestone{Defensa pública}{2027-08-31} \\
     \end{ganttchart}
   \end{center}
-  \caption{Diagrama de gantt de ejemplo}
+  \caption{Diagrama de Gantt del proyecto.}
   \label{fig:gantt}
 \end{figure}
-
-
-\begin{landscape}
-\begin{figure}[htpb]
-\centering 
-\includegraphics[height=.85\textheight]{./Figuras/Gantt-2.png}
-\caption{Ejemplo de diagrama de Gantt (apaisado).} %Modificar este título acorde.
-\label{fig:diagGantt}
-\end{figure}
-
 \end{landscape}
-
-\end{consigna}
 
 
 \section{12. Presupuesto detallado del proyecto}
