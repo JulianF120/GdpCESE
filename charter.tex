@@ -86,7 +86,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un robot expresivo de exhibición, que atraiga visitantes en stands y muestre en vivo cómo funciona por dentro. El trabajo tendrá un presupuesto preliminar estimado de 533 horas y un costo estimado de {\$ 200}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un robot expresivo de exhibición, que atraiga visitantes en stands y muestre en vivo cómo funciona por dentro. El trabajo tendrá un presupuesto preliminar estimado de 521 horas y un costo estimado de {\$ 200}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -438,31 +438,53 @@ cercano en la serie de Fibonacci y así se obtiene el peso del Story Point.
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: 533 h.
+Cantidad total de horas: 521 h.
 
 
 \section{10. Diagrama de Activity On Node}
 \label{sec:AoN}
 
-\begin{consigna}{red}
-Armar el AoN a partir del WBS definido en la etapa anterior.
-
-Una herramienta simple para desarrollar los diagramas es el Draw.io (\url{https://app.diagrams.net/}).
-\href{https://app.diagrams.net}{Draw.io}
-
+El diagrama se armó a partir de los once grupos de tareas del WBS de la sección \ref{sec:wbs}. Todos los tiempos están expresados en horas (h). En la figura \ref{fig:AoN} se muestra el diagrama. Cada nodo indica la duración del grupo (suma de sus tareas), el inicio y el fin más temprano (ES y EF), el inicio y el fin más tardío (LS y LF) y la holgura (H). Los colores indican el tipo de camino: rojo para el camino crítico (H = 0), amarillo para los semicríticos y azul para los no críticos.
 
 \begin{figure}[htpb]
-\centering 
-\includegraphics[width=.8\textwidth]{./Figuras/AoN.png}
-\caption{Diagrama de \textit{Activity on Node}.}
+\centering
+\includegraphics[width=\textwidth]{./Figuras/AoN_v2.png}
+\caption{Diagrama de \textit{Activity on Node}. Tiempos en horas.}
 \label{fig:AoN}
 \end{figure}
 
-Indicar claramente en qué unidades están expresados los tiempos.
-De ser necesario indicar los caminos semi críticos y analizar sus tiempos mediante un cuadro.
-Es recomendable usar colores y un cuadro indicativo describiendo qué representa cada color.
+Las dependencias consideradas son las siguientes:
 
-\end{consigna}
+\begin{itemize}
+	\item La elección de hardware (G2) es previa al firmware (G4), al módulo de IA (G5) y a la mecánica y alimentación (G3).
+	\item La aplicación ``vista por dentro'' (G6) necesita la telemetría del firmware (G4) y las detecciones del módulo de IA (G5).
+	\item El desarrollo integrado (G7) requiere la mecánica y alimentación (G3) y la aplicación (G6), que a su vez incluye al firmware y a la IA.
+	\item La documentación de entregables (G10) comienza una vez integrado el sistema (G7), en paralelo con la verificación (G8) y la puesta en marcha (G9).
+	\item La documentación del trabajo final (G11) se redacta en paralelo con el desarrollo, a partir de la investigación inicial (G1). Las tareas de presentación final y video, que requieren el robot terminado, se realizan al cierre dentro de la holgura de este grupo.
+\end{itemize}
+
+La duración total del proyecto según el camino crítico es de 346 h. En la tabla \ref{tab:caminos} se comparan los caminos del diagrama.
+
+\begin{table}[ht]
+\centering
+\caption{Caminos del diagrama de \textit{Activity on Node}}
+\label{tab:caminos}
+\begin{tabularx}{\linewidth}{|l|X|c|c|}
+\hline
+\rowcolor[HTML]{C0C0C0}
+Tipo & Grupos & Duración [h] & Holgura [h] \\ \hline
+Crítico & G1, G2, G4, G6, G7, G8, G9 & 346 & 0 \\ \hline
+Crítico & G1, G2, G4, G6, G7, G10 & 346 & 0 \\ \hline
+Semicrítico & G1, G2, G5, G6, G7, G8, G9 & 273 & 73 \\ \hline
+Semicrítico & G1, G2, G3, G7, G8, G9 & 229 & 117 \\ \hline
+No crítico & G1, G11 & 94 & 252 \\ \hline
+\end{tabularx}
+\end{table}
+
+Se consideran caminos semicríticos aquellos cuya holgura es menor a la mitad de la duración del camino crítico (173 h). Hay dos caminos críticos que terminan con la misma duración: el de la verificación y la puesta en marcha (G8 y G9), y el de la documentación de entregables (G10). Un retraso en cualquiera de los grupos G1, G2, G4, G6 o G7 retrasa todo el proyecto. El firmware (G4) es el grupo más largo del camino crítico (113 h), por lo que es el que requiere más seguimiento. El módulo de IA (G5) tiene 73 h de holgura, pero un atraso mayor lo vuelve crítico.
+
+La duración de 346 h supone que los grupos de distintos caminos se realizan en paralelo. Como el proyecto lo lleva adelante una sola persona, el esfuerzo total es de 521 h (suma de todos los grupos) y el diagrama se utiliza para definir el orden de ejecución y las prioridades, no la duración en calendario.
+
 
 \section{11. Diagrama de Gantt}
 \label{sec:gantt}
