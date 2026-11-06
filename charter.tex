@@ -86,7 +86,7 @@ Buenos Aires, \fechaInicioName
 
 \vspace{2cm}
 
-Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un robot expresivo de exhibición, que atraiga visitantes en stands y muestre en vivo cómo funciona por dentro. El trabajo tendrá un presupuesto preliminar estimado de 500 horas y un costo estimado de {\$ 200}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
+Por medio de la presente se acuerda con el \authorname\hspace{1px} que su Trabajo Final de la \degreename\hspace{1px} se titulará ``\ttitle'' y consistirá en la implementación de un robot expresivo de exhibición, que atraiga visitantes en stands y muestre en vivo cómo funciona por dentro. El trabajo tendrá un presupuesto preliminar estimado de 533 horas y un costo estimado de {\$ 200}, con fecha de inicio el \fechaInicioName\hspace{1px} y fecha de presentación pública el \fechaFinalName.
 
 Se adjunta a esta acta la planificación inicial.
 
@@ -111,7 +111,7 @@ El proyecto consiste en la implementación de un robot expresivo de exhibición,
 
 El LSE participará en ferias y eventos para difundir sus posgrados, pero no cuenta con una demostración propia. Los sistemas embebidos son difíciles de mostrar: su funcionamiento no se ve.
 
-La propuesta es una mascota: un robot con una pantalla como cara, que detecta a los visitantes, los sigue con la mirada, cambia de expresión y es capaz de recordar sus nombres. A su lado, un monitor muestra en tiempo real sus tareas, su estado, el tráfico de sus buses y la vista de la cámara con las detecciones e identificaciones de inteligencia artificial. Así el robot atrae al público y el monitor muestra lo que se aprende en la CESE y en la CEIA.
+La propuesta es una mascota: un robot con una pantalla como cara, que detecta a los visitantes, los sigue con la mirada, cambia de expresión, responde a sus comandos de voz y juega con ellos: el visitante le muestra un objeto y el robot le dice qué es. A su lado, un monitor muestra en tiempo real sus tareas, su estado, el tráfico de sus buses y la vista de la cámara con las detecciones de inteligencia artificial. Así el robot atrae al público y el monitor muestra lo que se aprende en la CESE y en la CEIA.
 
 En la figura \ref{fig:diagBloques} se muestra el diagrama de bloques del sistema. Se observa que el controlador principal recibe la información del sensor de presencia y comanda la pantalla, el cuello, el parlante y los LEDs. Además envía telemetría al monitor de la vista por dentro. A través del conector de expansión se vincula con el módulo de inteligencia artificial (CEIA), procesado en el ordenador/placa Linux, y se permite sumar a futuro agregados de IoT sin modificar el diseño base. 
 
@@ -170,15 +170,16 @@ Se busca crear un robot expresivo de exhibición, que pueda:
 	\item Mover el cuello como lo hace un humano, 180° en torno al eje vertical y 90° en torno al eje horizontal.
 	\item Detectar presencia de personas.
 	\item Mostrar expresiones faciales en una pantalla, incluyendo ojos y boca. 
-	\item Capacidad de interactuar con personas mediante juegos.
-	\item Detectar distintos objetos a definir para generar juegos interactivos con las personas. 
+	\item Detectar y contar personas mediante una cámara y el módulo de inteligencia artificial.
+	\item Interactuar con las personas mediante un juego: el visitante muestra un objeto al robot y este le dice de qué objeto se trata.
+	\item Detectar y clasificar distintos objetos a definir, para el juego de interacción con las personas.
 	\item Recibir comandos de voz y responder con voz sintetizada.
 	\item Mostrar en un monitor externo la telemetría del robot, incluyendo:
 		\begin{itemize}
 		\item Estado de los sensores.
 		\item Visualización de datos.
 		\item Estado de los buses de comunicación.
-		\item Vista de la cámara con las detecciones e identificaciones de inteligencia artificial.
+		\item Vista de la cámara con las detecciones de inteligencia artificial.
 		\end{itemize}
 \end{itemize}
 
@@ -193,7 +194,7 @@ Para el desarrollo del presente proyecto se supone que:
 	\item Se cuenta con los materiales necesarios para la construcción de la carcasa del robot, incluyendo impresora 3D y filamento.
 	\item Se contará con el apoyo del LSE para la resolución de problemas de hardware y software que puedan surgir durante el desarrollo del proyecto.
 	\item Los componentes y materiales necesarios para el desarrollo del proyecto estarán disponibles en el mercado.
-	\item Para la generacion del cuerpo del robot se cuenta con el uso de modelos libres. 
+	\item Para el diseño mecánico del robot (cuerpo y cuello) se utilizará un proyecto de uso libre, que se adaptará a las necesidades del proyecto.
 \end{itemize}
 
 \section{6. Requerimientos}
@@ -217,15 +218,15 @@ En esta sección se describen los distintos requerimientos establecidos para el 
 		\end{enumerate}	
 	\item Requerimientos de interacción y reconocimiento:
 		\begin{enumerate}
-			\item Identificar a los visitantes previamente registrados durante la jornada y mostrar sus nombres en el monitor lateral en tiempo real.
+			\item Detectar personas mediante una cámara y el módulo de IA, y mostrar las detecciones en el monitor lateral en tiempo real.
 			\item Contabilizar la cantidad de personas detectadas frente al stand durante la exhibición.
-			\item Ejecutar detección y clasifiacion de objetos especificos a definir.
-			\item Capaz de inicar comandos mediante comandoz de vos recibidos. 
-			\item Responder cuando un visitante deja el stand con un mensaje de adios usando un modulo de salida de audio. 
+			\item Detectar y clasificar objetos específicos a definir, mostrados por el visitante a la cámara.
+			\item Jugar con el visitante: cuando este muestra un objeto, el robot debe decir por voz de qué objeto se trata.
+			\item Responder con un mensaje de despedida cuando un visitante deja el stand, usando un módulo de salida de audio.
 		\end{enumerate}
 	\item Requerimientos de subsistemas y hardware:
 		\begin{enumerate}
-			\item El controlador principal debe contar con un controlador LCD implementado en una placa de circuito impreso propia.
+			\item El controlador principal debe implementarse sobre una placa de desarrollo comercial con un módulo LCD.
 			\item El sistema debe operar mediante una máquina de estados para gestionar las expresiones (reposo, saludo, sorpresa, dormido).
 			\item Contar con una pantalla de 4 a 5 pulgadas para la animación de ojos y expresiones.
 			\item Contar con un cuello de dos ejes con servos con realimentación.
@@ -289,15 +290,18 @@ cercano en la serie de Fibonacci y así se obtiene el peso del Story Point.
 	\item Como cliente quiero que el sistema pueda armarse y ponerse en marcha en menos de 15 minutos para que su puesta en marcha en distintas exhibiciones sea sencilla.
 
 	\textit{Story Points}: 55 (dificultad: 13, complejidad: 21, incertidumbre: 5)
-	\item Como cliente quiero que el sistema pueda detectar rostros de personas en tiempo real para mostrar las enseñanzas que se imparten en la CEIA.
+	\item Como cliente quiero que el sistema pueda detectar y contar personas en tiempo real para mostrar las enseñanzas que se imparten en la CEIA.
 
 	\textit{Story Points}: 13 (dificultad: 5, complejidad: 5, incertidumbre: 1)
+	\item Como cliente quiero que el robot juegue con los visitantes, diciéndoles qué objeto le muestran, para atraer y entretener al público en el stand.
+
+	\textit{Story Points}: 34 (dificultad: 5, complejidad: 13, incertidumbre: 5)
 	\item Como cliente quiero que el sistema cuente con una placa de extensión para poder agregar fácilmente a futuro funcionalidades relacionadas a otras carreras del LSE.
 
 	\textit{Story Points}: 55 (dificultad: 13, complejidad: 21, incertidumbre: 13)
-	\item Como cliente quiero que el sistema reconozca comandos de voz de visitantes para poder recordar el nombre de la persona y poder mostrar su rostro con su nombre en caso de que pase nuevamente por el stand.
+	\item Como cliente quiero que el sistema reconozca comandos de voz de los visitantes y responda con voz sintetizada, incluida una despedida cuando se retiran, para que la interacción sea natural.
 
-	\textit{Story Points}: 55 (dificultad: 13, complejidad: 13, incertidumbre: 13)
+	\textit{Story Points}: 34 (dificultad: 5, complejidad: 13, incertidumbre: 5)
 	\item Como cliente quiero que el sistema cuente con una pantalla para mostrar el estado interno del sistema para poder demostrar cómo se está comportando internamente el robot en cada una de sus acciones.
 
 	\textit{Story Points}: 8 (dificultad: 2, complejidad: 5, incertidumbre: 1)
@@ -317,7 +321,7 @@ cercano en la serie de Fibonacci y así se obtiene el peso del Story Point.
 	\item Robot funcional.
 	\item Firmware documentado y versionado, con su batería de tests.
 	\item Aplicación de ``vista por dentro'' para el monitor lateral, integrando la visualización de telemetría embebida y el visor de inteligencia artificial en tiempo real.
-	\item Especificación del conector y del protocolo de expansión, validado mediante la integración del módulo de reconocimiento facial e interacción (CEIA).
+	\item Especificación del conector y del protocolo de expansión, validado mediante la integración del módulo de detección de personas y objetos, y de voz (CEIA).
 	\item Manual de armado, uso y mantenimiento para el laboratorio.
 \end{itemize}
 
@@ -325,14 +329,15 @@ cercano en la serie de Fibonacci y así se obtiene el peso del Story Point.
 \label{sec:wbs}
 
 \begin{enumerate}
-\item Investigación y desglose macro de diseño (15 h)
+\item Investigación y desglose macro de diseño (21 h)
 	\begin{enumerate}
 	\item Investigación de proyectos de índole similar (4 h)
 	\item Investigación y selección de pantalla LCD y su controlador (6 h)
 	\item Investigación y selección de servomotores (2 h)
 	\item Definición de estética del robot (3 h)
+	\item Búsqueda y selección de un diseño mecánico de uso libre para el cuello y la carcasa (6 h)
 	\end{enumerate}
-\item Elección de hardware (36 h)
+\item Elección de hardware (40 h)
 	\begin{enumerate}
 	\item Investigación y selección de sensores de cercanía/detección (4 h)
 	\item Investigación y selección de módulos de entrada de audio (4 h)
@@ -342,10 +347,19 @@ cercano en la serie de Fibonacci y así se obtiene el peso del Story Point.
 	\item Investigación y selección de módulo o cámara pequeña (4 h)
 	\item Investigación y selección de placa de desarrollo a utilizar (8 h)
 	\item Definición de requisitos mínimos de computadora externa a utilizar (4 h)
+	\item Selección de la fuente de alimentación de 220 V certificada (4 h)
 	\end{enumerate}
-\item Desarrollo de firmware (63 h)
+\item Mecánica y alimentación (22 h)
+	\begin{enumerate}
+	\item Adaptación del diseño mecánico de uso libre seleccionado (6 h)
+	\item Impresión 3D de piezas y ajustes (8 h)
+	\item Montaje de servos y cuello (4 h)
+	\item Integración de la fuente de alimentación y cableado (4 h)
+	\end{enumerate}
+\item Desarrollo de firmware (113 h)
 	\begin{enumerate}
 	\item Definir el diseño del firmware del sistema (3 h)
+	\item Configuración del entorno de desarrollo y del análisis estático (6 h)
 	\item Generación de protocolo de comunicación propio del robot (8 h)
 	\item Implementación de driver de pantalla LCD (10 h)
 	\item Implementación de driver de pruebas de pantalla LCD (10 h)
@@ -355,29 +369,51 @@ cercano en la serie de Fibonacci y así se obtiene el peso del Story Point.
 	\item Implementación de driver de prueba de sensores de cercanía/detección (6 h)
 	\item Implementación de driver de entrada de audio (6 h)
 	\item Implementación de driver de salida de audio (6 h)
+	\item Implementación de la máquina de estados de expresiones (8 h)
+	\item Implementación de la animación de ojos y boca (8 h)
+	\item Control de servos con realimentación y seguimiento de la mirada (10 h)
+	\item Lógica de detección de presencia, salida del visitante y mensaje de despedida (6 h)
+	\item Implementación de telemetría del firmware (6 h)
+	\item Tests unitarios de la lógica de comportamiento (6 h)
 	\end{enumerate}
-\item Desarrollo de módulo de IA (25 h)
+\item Desarrollo de módulo de IA (40 h)
 	\begin{enumerate}
-		\item Investigación y selección de modelo preentrenado de reconocimiento de personas (2 h)
-		\item Selección de objetos para juego interactivo (1 h)
-		\item Investigación y selección de modelo preentrenado para detección de objetos en base a objetos seleccionados (2 h)
-		\item Investigación y selección de modelo preentrenado de lenguaje humano (2 h)
-		\item Desarrollo de sistema de reconocimiento de personas (2 h)
+		\item Selección de objetos para el juego interactivo (1 h)
+		\item Investigación y selección de modelo preentrenado de detección de personas (2 h)
+		\item Investigación y selección de modelo preentrenado para detección de objetos, en base a los objetos seleccionados (2 h)
 		\item Desarrollo de sistema de reconocimiento de objetos (2 h)
-		\item Desarrollo de sistema de modelo de lenguaje humano (4 h)
+		\item Desarrollo de la lógica del juego de interacción: el visitante muestra un objeto y el robot dice qué es (6 h)
+		\item Investigación y selección de modelos preentrenados de reconocimiento y síntesis de voz (3 h)
+		\item Desarrollo de sistema de detección y conteo de personas (4 h)
+		\item Desarrollo de sistema de reconocimiento de voz y comandos (6 h)
+		\item Desarrollo de sistema de síntesis de voz (4 h)
 		\item Desarrollo de módulo de software del protocolo de comunicación propio del robot (2 h)
 		\item Desarrollo de software de módulo IA externo del robot (2 h)
 		\item Desarrollo de tests de software de módulo IA externo del robot (6 h)
 	\end{enumerate}
+\item Aplicación ``vista por dentro'' (26 h)
+	\begin{enumerate}
+		\item Diseño de la aplicación y de la interfaz del monitor lateral (4 h)
+		\item Implementación de la visualización de telemetría y tráfico de buses (14 h)
+		\item Integración de la vista de cámara con las detecciones de IA (8 h)
+	\end{enumerate}
 \item Desarrollo integrado del sistema (106 h)
 	\begin{enumerate}
-		\item Unificación de módulos de firmware en sistema central (40 h)
-		\item Desarrollo de estética de robot (10 h)
+		\item Unificación de drivers de pantalla, servos y sensores en sistema central (20 h)
+		\item Unificación de audio, protocolo y telemetría en sistema central (20 h)
+		\item Acabado estético del robot (10 h)
 		\item Integración de módulos de hardware con estética de robot y primer armado (5 h)
 		\item Búsqueda de optimización de armado (20 h)
-		\item Prueba de puesta en marcha y prueba general de hardware (5 h)
+		\item Prueba de encendido y prueba general de hardware (5 h)
 		\item Prueba de integración de hardware e IA (6 h)
-		\item Arreglo de bugs o no funcionalidades (20 h)
+		\item Corrección de errores y funcionalidades faltantes (20 h)
+	\end{enumerate}
+\item Verificación y validación (17 h)
+	\begin{enumerate}
+		\item Prueba del juego de interacción con objetos (3 h)
+		\item Plan de pruebas de verificación de requerimientos (8 h)
+		\item Medición del tiempo de detección y giro de cabeza (3 h)
+		\item Verificación de seguridad física y del tiempo de armado (3 h)
 	\end{enumerate}
 \item Puesta en marcha (23 h)
 	\begin{enumerate}
@@ -393,15 +429,16 @@ cercano en la serie de Fibonacci y así se obtiene el peso del Story Point.
 		\item Documentación de protocolos del robot (10 h)
 		\item Manual de integración de nuevos módulos (10 h)
 	\end{enumerate}
-\item Documentación del trabajo final (61 h)
+\item Documentación del trabajo final (73 h)
 	\begin{enumerate}
 		\item Redacción de taller de trabajo final A (30 h)
 		\item Redacción de taller de trabajo final B (30 h)
-		\item Presentación final (1 h)
+		\item Preparación de la presentación final y ensayo de la defensa (10 h)
+		\item Video demostrativo del robot (3 h)
 	\end{enumerate}
 \end{enumerate}
 
-Cantidad total de horas: 369 h.
+Cantidad total de horas: 533 h.
 
 
 \section{10. Diagrama de Activity On Node}
