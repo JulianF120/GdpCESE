@@ -190,7 +190,7 @@ Para el desarrollo del presente proyecto se supone que:
 
 \begin{itemize}
 	\item Se dispondrá de al menos 12 horas semanales para realizar avances.
-	\item Se contará con USD 200 para la compra de materiales y componentes, provistos por el LSE.
+	\item Se contará con aproximadamente USD 200 para la compra de materiales y componentes, provistos por el LSE.
 	\item Se cuenta con los materiales necesarios para la construcción de la carcasa del robot, incluyendo impresora 3D y filamento.
 	\item Se contará con el apoyo del LSE para la resolución de problemas de hardware y software que puedan surgir durante el desarrollo del proyecto.
 	\item Los componentes y materiales necesarios para el desarrollo del proyecto estarán disponibles en el mercado.
@@ -572,72 +572,62 @@ En la figura \ref{fig:gantt} se muestra el diagrama de Gantt. A la izquierda de 
 \section{12. Presupuesto detallado del proyecto}
 \label{sec:presupuesto}
 
-\begin{consigna}{red}
-Si el proyecto es complejo entonces separarlo en partes:
-\begin{itemize}
-	\item Un total global, indicando el subtotal acumulado por cada una de las áreas.
-	\item El desglose detallado del subtotal de cada una de las áreas.
-\end{itemize}
+El presupuesto se expresa en dólares estadounidenses (USD). El valor de la hora de ingeniería es de USD 15, estimado a partir del salario bruto mensual de un ingeniero electrónico en Uruguay (alrededor de USD 2.600, dentro de un rango de USD 800 a USD 3.200 según la fuente) dividido por 173 h mensuales. Las horas surgen del desglose de la sección \ref{sec:wbs}: las 355 h de los grupos 1 a 9 corresponden a análisis, diseño e implementación y las 80 h de los grupos 10 y 11 a documentación y redacción de la memoria. Los componentes incluyen la placa Linux para el módulo de IA y el monitor de la ``vista por dentro''. El LSE aporta aproximadamente USD 200 para materiales, según los supuestos del proyecto, y los componentes superan ese monto en USD 170.
 
-IMPORTANTE: No olvidarse de considerar los COSTOS INDIRECTOS.
-
-Incluir la aclaración de si se emplea como moneda el peso argentino (ARS) o si se usa moneda extranjera (USD, EUR, etc). Si es en moneda extranjera se debe indicar la tasa de conversión respecto a la moneda local en una fecha dada.
-
-\end{consigna}
+En la tabla \ref{tab:presupuesto} se presenta el presupuesto total y en la tabla \ref{tab:componentes} el detalle de los componentes.
 
 \begin{table}[htpb]
 \centering
+\caption{Presupuesto del proyecto (USD)}
+\label{tab:presupuesto}
 \begin{tabularx}{\linewidth}{@{}|X|c|r|r|@{}}
 \hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS DIRECTOS} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Descripción &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
- &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} &
-  \multicolumn{1}{c|}{} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-\multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS INDIRECTOS} \\ \hline
-\rowcolor[HTML]{C0C0C0} 
-Descripción &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
-  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{1}{|l|}{} &
-   &
-   &
-   \\ \hline
-\multicolumn{3}{|c|}{SUBTOTAL} &
-  \multicolumn{1}{c|}{} \\ \hline
 \rowcolor[HTML]{C0C0C0}
-\multicolumn{3}{|c|}{TOTAL} &
-   \\ \hline
+\multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}COSTOS DIRECTOS} \\ \hline
+\rowcolor[HTML]{C0C0C0}
+Descripción &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
+Horas de ingeniería: análisis, diseño e implementación & 355 h & 15 & 5.325 \\ \hline
+Horas de ingeniería: documentación y redacción de la memoria & 80 h & 15 & 1.200 \\ \hline
+Componentes (detalle en la tabla \ref{tab:componentes}) & 1 & 370 & 370 \\ \hline
+\multicolumn{3}{|c|}{SUBTOTAL} & 6.895 \\ \hline
+\rowcolor[HTML]{C0C0C0}
+\multicolumn{4}{|c|}{\cellcolor[HTML]{C0C0C0}RESERVA PARA IMPREVISTOS} \\ \hline
+Reserva para imprevistos (20 \% del subtotal) & 1 & 1.379 & 1.379 \\ \hline
+\multicolumn{3}{|c|}{SUBTOTAL} & 1.379 \\ \hline
+\rowcolor[HTML]{C0C0C0}
+\multicolumn{3}{|c|}{TOTAL} & 8.274 \\ \hline
+\end{tabularx}%
+\end{table}
+
+El costo total del proyecto es de USD 8.274.
+
+\begin{table}[htpb]
+\centering
+\caption{Detalle de componentes (USD)}
+\label{tab:componentes}
+\begin{tabularx}{\linewidth}{@{}|X|c|r|r|@{}}
+\hline
+\rowcolor[HTML]{C0C0C0}
+Descripción &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Cantidad} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor unitario} &
+  \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Valor total} \\ \hline
+Placa de desarrollo del controlador principal & 1 & 25 & 25 \\ \hline
+Módulo LCD de 4 a 5 pulgadas con controlador & 1 & 35 & 35 \\ \hline
+Servomotores con realimentación (cuello de dos ejes) & 2 & 15 & 30 \\ \hline
+Sensor de presencia (ToF o radar) & 1 & 12 & 12 \\ \hline
+Cámara pequeña & 1 & 18 & 18 \\ \hline
+Módulo de micrófono & 1 & 6 & 6 \\ \hline
+Parlante con amplificador & 1 & 10 & 10 \\ \hline
+Placa Linux para el módulo de IA y la aplicación & 1 & 90 & 90 \\ \hline
+Monitor para la ``vista por dentro'' & 1 & 80 & 80 \\ \hline
+Fuente de alimentación de 220 V certificada & 1 & 15 & 15 \\ \hline
+Cableado, conectores y electrónica auxiliar & 1 & 20 & 20 \\ \hline
+Tornillería, rodamientos y piezas mecánicas auxiliares & 1 & 29 & 29 \\ \hline
+\multicolumn{3}{|c|}{TOTAL} & 370 \\ \hline
 \end{tabularx}%
 \end{table}
 
